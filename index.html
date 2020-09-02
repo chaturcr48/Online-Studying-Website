@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proj</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .container {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .box1 {
+            display: grid;
+            grid-template-rows: repeat(10, auto);
+            padding: 5px;
+            width: 300px;
+            height: 550px;
+        }
+
+        .box2 {
+            display: grid;
+            grid-template-rows: repeat(2, auto);
+            width: 700px;
+            margin: 0px 10px;
+            height: auto;
+        }
+
+        .box3 {
+            display: grid;
+            grid-template-rows: 1fr 1fr 10fr;
+            width: 300px;
+            margin: 0px auto;
+            border-radius: 5px;
+            overflow: hidden;
+            height: 600px;
+            grid-row-gap: 0.5rem;
+            padding: 0px 5px;
+        }
+
+        .message {
+            padding: 10px;
+            transform: rotate(180deg);
+            direction: ltr;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+
+        button {
+            display: none;
+        }
+
+        h2 {
+            padding-left: 25px;
+        }
+
+        .box1-2 {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+        }
+
+        .box1-3 {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-columns: 4fr 1fr;
+        }
+
+        .b3m1 {
+            text-align: center;
+            font-weight: bolder;
+            font-size: 20px;
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            padding: 5px;
+        }
+
+        .icon-bar {
+            text-align: center;
+        }
+
+        .gap {
+            padding: 10px 0px;
+        }
+
+        #hover {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-template-columns: 1fr 4fr;
+            color: red;
+        }
+
+        #hover:hover {
+            background-color: rgb(185, 197, 204);
+            border-radius: 0px 20px 20px 0px;
+            cursor: pointer;
+        }
+
+        #joinclass {
+            cursor: pointer;
+        }
+
+        .b2m2 {
+            display: grid;
+            grid-template-rows: 4fr 2fr;
+        }
+
+        .manage {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+
+        }
+
+        .count {
+            text-align: center;
+        }
+
+        .name {
+            text-align: center;
+        }
+
+        .heading {
+            padding-left: 20px;
+        }
+
+        .b2m1 img {
+            border-radius: 50%;
+            width: 100px;
+            margin-top: 30px;
+        }
+
+        #shareicon {
+            padding: 10px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .box2 {
+            display: grid;
+            grid-template-rows: 2fr 4fr 1fr;
+            grid-row-gap: 0.3rem;
+        }
+
+        .fbox,
+        .sbox {
+            display: grid;
+            grid-template-columns: 1fr 12fr;
+            margin: 5px;
+            box-shadow: -1px -0px 3px 3px #999595c2;
+            margin-top: 30px;
+        }
+
+        .content-1 {
+            display: grid;
+            grid-template-rows: 2fr 2fr 0.5fr;
+        }
+
+        .content-2 {
+            display: grid;
+            grid-template-rows: 0.6fr 2fr;
+        }
+
+        .image img {
+            border-radius: 50%;
+            width: 50px;
+            margin-top: 30px;
+            padding: 5px;
+        }
+
+        .bottom {
+            display: grid;
+            grid-template-columns: repeat(3, auto);
+        }
+
+        .para {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+
+        .bottom {
+            padding-left: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        .box3_heading {
+            display: flex;
+            flex-direction: column;
+            grid-template-rows: 1fr 2fr;
+            box-shadow: -1px -0px 3px 3px #999595c2;
+            margin-top: 30px;
+        }
+
+        .chat-container {
+            height: 400px;
+            overflow: auto;
+            transform: rotate(180deg);
+            direction: rtl;
+            display: grid;
+            grid-template-rows: repeat(1, auto);
+            background-color: blanchedalmond;
+            border-radius: 10px;
+        }
+
+        .chatbox_content {
+            padding-left: 5px;
+        }
+
+        .avatar {
+            float: left;
+            margin-right: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .left{
+            border-top: 1px solid rgba(0, 0, 0, 0.199);
+        }
+        .right {
+            display: flex;
+            box-shadow: -1px -0px 3px 3px #999595c2;
+        }
+        .students{
+            color: rgba(0, 0, 0, 0.5);
+        }
+        #strong{
+            color: black;
+        }
+        .message:hover{
+            background-color: rgb(211, 213, 218);
+        }
+        .fa{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="left">
+
+            <div class="box1" id="size">
+                <div class="box1-2 gap">
+                    <div class="b2m1">
+                        <img src="https://st3.depositphotos.com/28687978/32084/v/450/depositphotos_320844700-stock-illustration-letter-golden-icon-middle-golden.jpg" alt="">
+                    </div>
+                    <div class="b2m2">
+                        <div class="heading">
+                            <h3>Bse 1st Sem Cse All Subjects </h3>
+                            <p>by Jeet Sir</p>
+                        </div>
+                        <div class="manage">
+                            <div class="materials">
+                                <div class="count">0</div>
+                                <div class="name">Materials</div>
+                            </div>
+                            <div class="post">
+                                <div class="count">15</div>
+                                <div class="name">Posts</div>
+                            </div>
+                            <div class="members">
+                                <div class="count">4</div>
+                                <div class="name">Members</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box1-3 gap">
+                    <div class="b3m1" id="joinclass">Join Class</div>
+                    <div class="icon-bar" id="shareicon"><a href="#"><i class="fa fa-share-alt"></i></a></div>
+                </div>
+                <div class="box1-4 gap" id="hover">
+                    <div class="icon-bar"><a href="#"><i class="fa fa-wifi"></i></a></div>
+                    <div class="b4m2">Timeline</div>
+                </div>
+                <div class="box1-5 gap" id="hover">
+                    <div class="icon-bar"><a href="#"><i class="fa fa-file-video-o"></i></a></div>
+                    <div class="b5m2">Live Class</div>
+                </div>
+                <div class="box1-6 gap" id="hover">
+                    <div class="icon-bar"><a href="#"><i class="fa fa-file-pdf-o"></i></a></div>
+                    <div class="b6m2">Notes</div>
+                </div>
+                <div class="box1-7 gap" id="hover">
+                    <div class="icon-bar"><a href="#"><i class="fa fa-file-archive-o"></i></a></div>
+                    <div class="b7m2">Assignment</div>
+                </div>
+                <div class="box1-8 gap" id="hover">
+                    <div class="icon-bar"><a href="#"><i class="fa fa-file-text-o"></i></a></div>
+                    <div class="b8m2">Test</div>
+                </div>
+                <div class="box1-9 gap" id="hover">
+                    <div class="icon-bar"><a href="#"><i class="fa fa-users"></i></a></div>
+                    <div class="b9m2">Attendence</div>
+                </div>
+                <div class="box1-10 gap" id="hover">
+                    <div class="icon-bar"><a href="#"><i class="fa fa-vcard-o"></i></a></div>
+                    <div class="b10m2">Apply for Leave</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="right">
+
+            <div class="box2" id="size">
+                <div class="fbox">
+                    <div class="image">
+                        <img src="https://st3.depositphotos.com/28687978/32084/v/450/depositphotos_320844700-stock-illustration-letter-golden-icon-middle-golden.jpg" alt="">
+                    </div>
+                    <div class="content-1">
+                        <div class="heading">
+                            <h3>Bse 1st Sem Cse All Subjects </h3>
+                            <strong>Jeet Sir </strong> <br>
+                            06-07-2020 10:12 AM
+                            <hr>
+                        </div>
+                        <div class="para">
+                            Aman, Aroop, Binayak submit your assignment Asap!! Last timing is 5:30pm today.
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis est quam, libero eum,
+                            earum
+                            quae distinctio tempore nisi quas, labore impedit ex esse error optio inventore odit?
+                            Molestias
+                            ab neque reiciendis temporibus sapiente. Minima corporis assumenda veniam. Ducimus
+                            asperiores
+                            sed a incidunt repellendus architecto beatae eum? Eius perspiciatis ipsum non.
+                        </div>
+                        <div class="bottom">
+                            <div class="icon">
+                                <hr><a href="#"><i class="fa fa-thumbs-o-up"></i>&nbsp Like</a></div>
+                            <div class="icon">
+                                <hr><a href="#"><i class="fa fa-comment-o"></i>&nbsp Comment</a></div>
+                            <div class="icon">
+                                <hr><a href="#"><i class="fa fa-share-alt"></i>&nbsp Share</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sbox">
+                    <div class="image">
+                        <img src="https://st3.depositphotos.com/28687978/32084/v/450/depositphotos_320844700-stock-illustration-letter-golden-icon-middle-golden.jpg" alt="">
+                    </div>
+                    <div class="content-2">
+                        <div class="heading">
+                            <h3>Bse 1st Sem Cse All Subjects </h3>
+                            <strong>Jeet Sir </strong> <br>
+                            06-07-2020 10:12 AM
+                            <hr>
+                        </div>
+                        <div class="para">
+                            Quiz is tomorrow be ready at 11am circulate this news among your friends, defaulters won't
+                            be
+                            considered.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis magnam amet consequatur, odit
+                            unde
+                            laudantium reiciendis dolores autem ipsum repellat fugit. Quas sunt mollitia possimus sed
+                            voluptatem dolor iusto cumque quis aut iste, obcaecati dignissimos reiciendis error ipsa
+                            modi a,
+                            ipsum saepe consequuntur facere quidem. Deserunt facere commodi labore earum dicta doloribus
+                            velit? Qui illum fuga repellat quasi ratione dolorem incidunt perferendis modi tempora totam
+                            hic
+                            expedita cum temporibus nemo aperiam fugiat nisi quos sint suscipit minus quaerat molestiae,
+                            eos
+                            id. Minima nisi sit nam corporis magnam, id cupiditate repudiandae eum numquam provident
+                            iure
+                            repellat accusamus, odio asperiores dolor. Cumque sint voluptatibus doloremque neque amet
+                            haru.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box3" id="size">
+                <div class="box3_heading">
+                    <div class="aa">
+                        <h4>&nbsp&nbsp&nbsp&nbsp About Classroom
+                            <hr>
+                        </h4>
+                    </div>
+                    <div class="bb">
+
+                    </div>
+                </div>
+                <div class="box3_title">
+                    <h2>In Class</h2>
+                </div>
+                <div class="chat-container">
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar"
+                                src="https://in.bmscdn.com/iedb/artist/images/website/poster/large/ronit-roy-18087-24-03-2017-12-31-01.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Raunit</strong><br>How is your job</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar" src="https://docplayer.net/docs-images/70/62874394/images/15-0.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Samsuddin</strong><br>Text me</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar" src="https://cdn.britannica.com/12/127612-050-E045E08C/Sanjay-Gupta.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Sanjay</strong><br>Do your work</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar"
+                                src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/hbz-bob-jdt-961755618-1530064896.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Simran</strong><br>Images</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar"
+                                src="https://pbs.twimg.com/profile_images/1145370466313359360/t5jEoC1F_400x400.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Bob</strong><br>I'm busy</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar" src="https://nettv4u.com/imagine/29-10-2019/shefali-zariwala.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Shephali</strong><br>Come lets enjoy</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar"
+                                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Alisa</strong><br>Give me the notes</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar"
+                                src="https://pbs.twimg.com/profile_images/1007630422988152833/DkgvVszI_400x400.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Rahim</strong><br>Don't reply</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar"
+                                src="https://i.insider.com/5dd7ff3c79d7570599564808?width=1136&format=jpeg" width="50px"
+                                height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Jason</strong><br><a href="#"><i
+                                        class="fa fa-file-pdf-o">&nbsp&nbsp</i></a>Pdf</div>
+                        </div>
+                    </div>
+                    <div class="message">
+                        <div class="chatbox">
+                            <img class="avatar"
+                                src="https://he-s3.s3.amazonaws.com/media/avatars/kumarchatur1/resized/180/48c083eimg20190922142841.jpg"
+                                width="50px" height="50px">
+                        </div>
+                        <div class="chatbox_content">
+                            <div class="students"><strong id="strong">Chatur</strong><br>Can we have a chat</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
